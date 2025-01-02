@@ -1,0 +1,54 @@
+/* ~ 1023 */
+@media screen and (min-width: 1023px) {
+}
+.navbar {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: max-content;
+  > ul {
+    display: flex;
+    width: 100%;
+    > li {
+      font-size: 12px;
+      padding: 30px 20px;
+    }
+    .active {
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+  }
+}
+
+/* 1024 ~ 1399까지 */
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+  .navbar {
+    top: 0;
+    > ul {
+      > li {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* 1400 ~ */
+@media screen and (min-width: 1400px) {
+  .navbar {
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+    > ul {
+      > li {
+        font-size: 16px;
+        padding: 20px 30px;
+        cursor: pointer;
+      }
+      > li:nth-last-child(1) {
+        padding-right: 40px;
+      }
+    }
+  }
+}
