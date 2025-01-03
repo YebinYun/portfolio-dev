@@ -1,21 +1,31 @@
-import React, { Dispatch, ReactElement, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { SectionProps } from "../../App";
 import "./index.css";
 
 type NavbarProps = {
-  setIsSection: Dispatch<SetStateAction<ReactElement>>;
+  setIsSection: Dispatch<SetStateAction<SectionProps>>;
   sections: SectionProps[];
 };
 
 const NavbarComponent = ({ setIsSection, sections }: NavbarProps) => {
-  const [activeButton, setActiveButton] = useState(sections[0].name);
+  const [activeButton, setActiveButton] = useState(sections[0].title);
 
   const changeHandler = (newActiveButton: string) => {
     setActiveButton(newActiveButton);
     const selectedSection = sections.find(
-      (button) => button.name === newActiveButton
+      (button) => button.title === newActiveButton
     );
-    setIsSection(selectedSection ? selectedSection.component : <></>);
+    setIsSection(
+      selectedSection
+        ? {
+            title: selectedSection.title,
+            component: selectedSection.component,
+          }
+        : {
+            title: "",
+            component: <></>,
+          }
+    );
   };
 
   return (
@@ -23,11 +33,11 @@ const NavbarComponent = ({ setIsSection, sections }: NavbarProps) => {
       <ul>
         {sections.map((headerButton) => (
           <li
-            key={headerButton.name}
-            className={activeButton === headerButton.name ? "active" : ""}
-            onClick={() => changeHandler(headerButton.name)}
+            key={headerButton.title}
+            className={activeButton === headerButton.title ? "active" : ""}
+            onClick={() => changeHandler(headerButton.title)}
           >
-            {headerButton.name}
+            {headerButton.title}
           </li>
         ))}
       </ul>

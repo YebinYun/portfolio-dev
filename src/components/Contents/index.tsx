@@ -1,12 +1,16 @@
-import React, { ReactElement } from "react";
+import "./index.css";
+import { SectionProps } from "../../App";
 
 interface MainContentProps {
-  isSection: ReactElement;
+  isSection: SectionProps;
 }
 
 const MainContentComponent = ({ isSection }: MainContentProps) => (
-  <article>
-    <div>{isSection}</div>
+  <article className="contents">
+    <p className="contentTitle">
+      {isSection.title === "About" ? "About Me" : isSection.title}
+    </p>
+    <div className="contentComponent">{isSection.component}</div>
   </article>
 );
 

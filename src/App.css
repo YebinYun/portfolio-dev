@@ -5,7 +5,9 @@
   > main {
     position: relative;
     top: 60px;
-    display: flex;
     /* height: calc(100% - 60px); */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 }

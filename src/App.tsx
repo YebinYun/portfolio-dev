@@ -9,33 +9,34 @@ import MainContent from "./components/Contents/index";
 import Sidebar from "./components/Sidebar/index";
 
 export interface SectionProps {
-  name: string;
+  title: string;
   component: ReactElement;
 }
 
 const App: React.FC = () => {
   const sections: SectionProps[] = [
     {
-      name: "About",
+      title: "About",
       component: <About />,
     },
     {
-      name: "Project",
+      title: "Project",
       component: <Project />,
     },
     {
-      name: "Resume",
+      title: "Resume",
       component: <Resume />,
     },
     {
-      name: "Contact",
+      title: "Contact",
       component: <Contact />,
     },
   ];
 
-  const [isSection, setIsSection] = useState<ReactElement>(
-    sections[0].component
-  );
+  const [isSection, setIsSection] = useState<SectionProps>({
+    title: sections[0].title,
+    component: sections[0].component,
+  });
 
   return (
     <div className="App">
