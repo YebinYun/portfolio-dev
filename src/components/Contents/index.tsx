@@ -7,9 +7,9 @@ interface MainContentProps {
 
 const MainContentComponent = ({ isSection }: MainContentProps) => (
   <article className="contents">
-    <p className="contentTitle">
+    <h2 className="contentTitle">
       {isSection.title === "About" ? "About Me" : isSection.title}
-    </p>
+    </h2>
     <div className="contentComponent">{isSection.component}</div>
   </article>
 );
