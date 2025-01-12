@@ -53,7 +53,7 @@ const ContactComponent = () => {
   return (
     <form ref={form} className="contact" onSubmit={onSendForm}>
       <p className="contactInfo">
-        👩‍💻 If you have any questions, please feel free to leave a message!
+        If you have any questions, please feel free to leave a message☺️
       </p>
       <div className="contactInput">
         <input

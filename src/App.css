@@ -4,10 +4,22 @@
   height: 100vh;
   > main {
     position: relative;
+    width: 100%;
     top: 60px;
-    /* height: calc(100% - 60px); */
     display: flex;
     justify-content: center;
     gap: 20px;
+  }
+}
+
+/* 1400 ~ */
+@media screen and (min-width: 1400px) {
+  .App {
+    display: flex;
+    justify-content: center;
+    main {
+      max-width: 1400px;
+      height: calc(100% - 60px);
+    }
   }
 }

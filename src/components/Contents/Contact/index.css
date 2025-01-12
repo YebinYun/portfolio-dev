@@ -2,8 +2,9 @@
   height: 100%;
   /* height: calc(100vh - 270px); */
   .contactInfo {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
+    color: #dddd;
     margin-bottom: 30px;
   }
 
@@ -19,7 +20,7 @@
 
   input:focus,
   textarea:focus {
-    border-color: #dbd8e3;
+    border-color: #ffd453ab;
     outline: none;
   }
 
@@ -48,6 +49,7 @@
     border: 1px solid #dbd8e334;
     border-radius: 5px;
     float: right;
+    transition: background 1s;
 
     button {
       font-size: 14px;
@@ -56,6 +58,6 @@
   }
 
   .sendButton:hover {
-    background: #dbd8e334;
+    background: #ffd453ab;
   }
 }

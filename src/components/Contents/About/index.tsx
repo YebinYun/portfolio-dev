@@ -1,6 +1,7 @@
 import "./index.css";
 import { Icon } from "@iconify/react";
 import { SKILL_LIST } from "../../../constants/skillList";
+import { EDUCATION_TIME_LINE } from "../../../constants/educationTimeLine";
 
 const AboutComponent = () => {
   return (
@@ -19,7 +20,7 @@ const AboutComponent = () => {
       </section>
 
       <section className="techStack">
-        <h3 className="techStackTitle">My Skillset</h3>
+        <h3 className="techStackTitle">Skillset</h3>
         <div className="techStackGrid">
           {SKILL_LIST.map((item) => (
             <div key={item.name} className="techStackItem">
@@ -30,9 +31,18 @@ const AboutComponent = () => {
         </div>
       </section>
 
-      {/* <section className="carrier">
-        <h3 className="carrierTitle">Tool I use</h3>
-      </section> */}
+      <section className="education">
+        <h3 className="educationTitle">Education</h3>
+        <ol className="educationList">
+          {EDUCATION_TIME_LINE.map((item) => (
+            <li key={item.title} className="educationItem">
+              <h4>{item.title}</h4>
+              <span>{item.year}</span>
+              <p>{item.context}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
     </article>
   );
 };

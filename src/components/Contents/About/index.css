@@ -4,6 +4,11 @@
     line-height: 160%;
   }
 
+  h3 {
+    font-size: 24px;
+    letter-spacing: 0.1rem;
+  }
+
   .techStack {
     margin: 50px 0;
 
@@ -18,7 +23,7 @@
         display: flex;
         justify-content: center;
 
-        > .icon {
+        .icon {
           width: 120px;
           height: 120px;
           padding: 25px;
@@ -37,10 +42,16 @@
           opacity: 0;
           transition: opacity 0.3s;
           font-weight: 600;
+          color: #ffd453;
         }
+
         &:hover .icon {
-          background: #5c5470;
+          background: rgba(0, 0, 0, 0.2);
           padding: 10px 25px 40px 25px;
+          g,
+          path {
+            fill: #ffd453;
+          }
         }
         &:hover .overlay {
           opacity: 1;
@@ -49,12 +60,53 @@
     }
   }
 
-  .carrier {
-  }
+  .education {
+    margin-top: 50px;
 
-  h3 {
-    font-size: 24px;
-    letter-spacing: 0.1rem;
+    .educationList {
+      .educationItem {
+        margin: 30px 0 0 60px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+
+        > span {
+          color: #ffd453;
+          font-weight: 400;
+        }
+
+        > p {
+          font-weight: 400;
+          color: #eeee;
+        }
+      }
+    }
+    .educationItem::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 1px;
+      height: calc(100% + 40px);
+      background: #dbd8e334;
+    }
+    .educationItem:last-child::before {
+      display: none; /* 마지막 아이템의 ::before 요소를 숨김 */
+    }
+
+    .educationItem::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -43px;
+      height: 6px;
+      width: 6px;
+      background: #ffd453;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #dbd8e334;
+    }
   }
 }
 
