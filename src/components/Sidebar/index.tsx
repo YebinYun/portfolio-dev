@@ -31,7 +31,7 @@ const SideBarComponent = () => {
         {LINK_LIST.map((list) => (
           <li className="linkItem" key={list.title}>
             <a href={list.link} target="_blank" rel="noreferrer">
-              <img className="linkIcon" src={list.icon} alt="" />
+              <img className="linkIcon" src={list.icon} alt={list.title} />
             </a>
           </li>
         ))}

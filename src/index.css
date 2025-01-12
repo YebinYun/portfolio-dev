@@ -55,7 +55,11 @@ a {
   box-sizing: border-box;
   color: #fafafa;
 }
-
+button {
+  all: unset;
+  padding: 5px 20px;
+  cursor: pointer;
+}
 /* 밤하늘 효과 */
 html,
 body {

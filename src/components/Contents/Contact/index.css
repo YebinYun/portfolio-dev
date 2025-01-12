@@ -1,0 +1,61 @@
+.contact {
+  height: 100%;
+  /* height: calc(100vh - 270px); */
+  .contactInfo {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  input,
+  textarea {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: none;
+    font-size: 16px;
+    font-family: "Noto Sans KR", serif;
+    border: 1px solid #dbd8e334;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #dbd8e3;
+    outline: none;
+  }
+
+  .contactInput {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    input {
+      flex: 1;
+    }
+  }
+
+  textarea {
+    width: 100% !important;
+    height: 15rem;
+    resize: none;
+    margin-bottom: 30px;
+  }
+
+  .sendButton {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #dbd8e334;
+    border-radius: 5px;
+    float: right;
+
+    button {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .sendButton:hover {
+    background: #dbd8e334;
+  }
+}
