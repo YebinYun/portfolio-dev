@@ -24,8 +24,8 @@
         justify-content: center;
 
         .icon {
-          width: 120px;
-          height: 120px;
+          width: 100%;
+          height: 100%;
           padding: 25px;
           border: 1px solid #dbd8e334;
           border-radius: 5px;

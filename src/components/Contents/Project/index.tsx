@@ -4,11 +4,13 @@ import { PROJECT_LIST } from "../../../constants/projectList";
 
 const ProjectComponent = () => {
   return (
-    <article>
+    <article className="project">
       <section className="projectGrid">
         {PROJECT_LIST.map((item) => (
           <div className="projectItem" key={item.title}>
-            {/* <img src={item.image} alt={item.title} /> */}
+            <div className="imageWrap">
+              <img src={item.image} alt={item.title} />
+            </div>
             <p>{item.title}</p>
           </div>
         ))}
