@@ -7,5 +7,12 @@ export const module = {
       test: /\.svg$/,
       use: ["@svgr/webpack", "url-loader"],
     },
+    {
+      test: /\.pdf$/,
+      type: "asset/resource",
+      generator: {
+        filename: "assets/pdf/[name].[hash][ext]",
+      },
+    },
   ],
 };
