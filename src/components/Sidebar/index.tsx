@@ -8,7 +8,7 @@ const SideBarComponent = () => {
       <div className="profile">
         <img
           className="profileImage"
-          src={`http://localhost:3000/assets/profile.jpg`}
+          src={process.env.PUBLIC_URL + "/assets/profile.jpg"}
           alt="profile"
         />
         <h2 className="profileName">Yun Yebin</h2>
