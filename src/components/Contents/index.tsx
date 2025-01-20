@@ -7,10 +7,10 @@ interface MainContentProps {
 
 const MainContentComponent = ({ isSection }: MainContentProps) => (
   <article className="contents">
-    <h2 className="contentTitle">
+    <h2 className="content-title">
       {isSection.title === "About" ? "About Me" : isSection.title}
     </h2>
-    <div className="contentComponent">{isSection.component}</div>
+    <div className="content-component">{isSection.component}</div>
   </article>
 );
 

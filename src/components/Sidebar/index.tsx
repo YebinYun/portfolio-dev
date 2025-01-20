@@ -7,31 +7,37 @@ const SideBarComponent = () => {
     <article className="sidebar">
       <div className="profile">
         <img
-          className="profileImage"
+          className="profile-image"
           src={process.env.PUBLIC_URL + "/assets/profile.jpg"}
           alt="profile"
         />
-        <h2 className="profileName">Yun Yebin</h2>
-        <span className="profileTitle">Web developer</span>
+        <div className="profile-text">
+          <h2 className="profile-name">Yun Yebin</h2>
+          <span className="profile-title">Web developer</span>
+        </div>
       </div>
 
-      <ul className="informationList">
+      <ul className="information-list">
         {INFORMATION_LIST.map((list) => (
-          <li className="informationItem" key={list.title}>
-            <img className="informationIcon" src={list.icon} alt={list.title} />
-            <div className="informationWrap">
-              <p className="informationTilte">{list.title} </p>
-              <p className="informationContent">{list.content} </p>
+          <li className="information-item" key={list.title}>
+            <img
+              className="information-icon"
+              src={list.icon}
+              alt={list.title}
+            />
+            <div className="information-wrap">
+              <p className="information-tilte">{list.title} </p>
+              <p className="information-content">{list.content} </p>
             </div>
           </li>
         ))}
       </ul>
 
-      <ul className="linkList">
+      <ul className="link-list">
         {LINK_LIST.map((list) => (
-          <li className="linkItem" key={list.title}>
+          <li className="link-item" key={list.title}>
             <a href={list.link} target="_blank" rel="noreferrer">
-              <img className="linkIcon" src={list.icon} alt={list.title} />
+              <img className="link-icon" src={list.icon} alt={list.title} />
             </a>
           </li>
         ))}
