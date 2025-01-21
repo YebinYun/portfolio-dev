@@ -1,20 +1,24 @@
 /* ~ 1023 */
-@media screen and (min-width: 1023px) {
-}
+
 .navbar {
   z-index: 9;
+  width: 100%;
+  height: max-content;
   position: fixed;
   bottom: 0;
-  right: 50%;
-  transform: translate(50%, 0);
-  width: max-content;
-  height: max-content;
-  > ul {
-    display: flex;
+  right: 0;
+  background: #352f44af;
+  /* right: 50%; */
+  /* transform: translate(50%, 0); */
+
+  > .navbar-list {
     width: 100%;
-    > li {
+    display: flex;
+    justify-content: center;
+
+    > .navbar-item {
       font-size: 12px;
-      padding: 30px 20px;
+      padding: 20px;
     }
     .active {
       font-weight: bold;
@@ -24,12 +28,16 @@
   }
 }
 
+/* 580 ~ */
+@media screen and (min-width: 580px) {
+}
+
 /* 1024 ~ 1399까지 */
 @media screen and (min-width: 1024px) and (max-width: 1399px) {
   .navbar {
     top: 0;
-    > ul {
-      > li {
+    > .navbar-list {
+      > .navbar-item {
         font-size: 14px;
       }
     }
@@ -42,13 +50,16 @@
     top: 0;
     right: 0;
     transform: translate(0, 0);
-    > ul {
-      > li {
+    > .navbar-list {
+      width: fit-content;
+      float: right;
+
+      > .navbar-item {
         font-size: 16px;
         padding: 20px 30px;
         cursor: pointer;
       }
-      > li:nth-last-child(1) {
+      > .navbar-item:nth-last-child(1) {
         padding-right: 40px;
       }
     }

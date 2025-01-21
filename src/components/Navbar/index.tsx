@@ -12,9 +12,11 @@ const NavbarComponent = ({ setIsSection, sections }: NavbarProps) => {
 
   const changeHandler = (newActiveButton: string) => {
     setActiveButton(newActiveButton);
-    const selectedSection = sections.find(
-      (button) => button.title === newActiveButton
-    );
+
+    const selectedSection = sections.find((button) => {
+      return button.title === newActiveButton;
+    });
+
     setIsSection(
       selectedSection
         ? {
@@ -30,11 +32,15 @@ const NavbarComponent = ({ setIsSection, sections }: NavbarProps) => {
 
   return (
     <nav className="navbar">
-      <ul>
+      <ul className="navbar-list">
         {sections.map((headerButton) => (
           <li
             key={headerButton.title}
-            className={activeButton === headerButton.title ? "active" : ""}
+            className={
+              activeButton === headerButton.title
+                ? "navbar-item active"
+                : "navbar-item"
+            }
             onClick={() => changeHandler(headerButton.title)}
           >
             {headerButton.title}
