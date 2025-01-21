@@ -61,23 +61,29 @@ button {
   cursor: pointer;
 }
 
-/* 스크롤 */
-
 body::-webkit-scrollbar {
-  width: 15px;
-  padding: 0 5px;
+  display: none;
 }
 
-body::-webkit-scrollbar-button {
-  height: 80px;
-}
+/* 스크롤 */
+@media screen and (min-width: 1400px) {
+  body::-webkit-scrollbar {
+    display: block;
+    width: 15px;
+    padding: 0 5px;
+  }
 
-body::-webkit-scrollbar-thumb {
-  border: 5px solid var(--smoky-black);
-  background: hsla(0, 0%, 100%, 0.1);
-  border-radius: 20px;
-  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-    inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  body::-webkit-scrollbar-button {
+    height: 80px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border: 5px solid var(--smoky-black);
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  }
 }
 
 /* 밤하늘 효과 */

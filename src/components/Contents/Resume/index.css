@@ -22,7 +22,13 @@
     background: #ffd453;
   }
 
-  .pdf-page {
-    width: 100%;
+  .react-pdf__Document {
+    div {
+      canvas,
+      div {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
   }
 }

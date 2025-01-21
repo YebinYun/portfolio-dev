@@ -17,6 +17,8 @@ const SideBarComponent = () => {
         </div>
       </div>
 
+      <hr className="separator" />
+
       <ul className="information-list">
         {INFORMATION_LIST.map((list) => (
           <li className="information-item" key={list.title}>
@@ -32,6 +34,8 @@ const SideBarComponent = () => {
           </li>
         ))}
       </ul>
+
+      <hr className="separator" />
 
       <ul className="link-list">
         {LINK_LIST.map((list) => (

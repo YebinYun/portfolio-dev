@@ -1,17 +1,19 @@
 .contact {
   height: 100%;
-  /* height: calc(100vh - 270px); */
-  .contactInfo {
+
+  .contact-info {
     font-size: 16px;
     font-weight: 400;
     color: #dddd;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   input,
   textarea {
+    width: 100% !important;
     border-radius: 5px;
     padding: 10px 20px;
+    margin-top: 20px;
     background: none;
     font-size: 16px;
     font-family: "Noto Sans KR", serif;
@@ -24,24 +26,13 @@
     outline: none;
   }
 
-  .contactInput {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-
-    input {
-      flex: 1;
-    }
-  }
-
   textarea {
-    width: 100% !important;
     height: 15rem;
     resize: none;
     margin-bottom: 30px;
   }
 
-  .sendButton {
+  .send-button {
     width: max-content;
     display: flex;
     align-items: center;
@@ -57,7 +48,26 @@
     }
   }
 
-  .sendButton:hover {
+  .send-button:hover {
     background: #ffd453ab;
+  }
+}
+
+/* ~ 580 */
+@media screen and (min-width: 580px) {
+}
+
+/* 1024 ~ 1399까지 */
+@media screen and (min-width: 1024px) {
+  .contact {
+    .contact-input {
+      display: flex;
+      gap: 30px;
+      /* margin-bottom: 30px; */
+
+      input {
+        flex: 1;
+      }
+    }
   }
 }

@@ -39,7 +39,7 @@ const App: React.FC = () => {
   });
 
   return (
-    <div className="App">
+    <div className="app">
       <Navbar setIsSection={setIsSection} sections={sections} />
       <main>
         <Sidebar />

@@ -1,11 +1,9 @@
-.App {
-  padding: 20px;
-  width: 100vw;
-  height: 100vh;
+.app {
+  margin: 20px;
+  margin-bottom: 75px;
+  min-width: 260px;
   > main {
-    position: relative;
     width: 100%;
-    top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,17 +12,29 @@
   }
 }
 
+/* ~ 580 */
+@media screen and (min-width: 580px) {
+}
+
+/* 1024 ~ 1399까지 */
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+  .app {
+    margin-top: 75px;
+    margin-bottom: 20px;
+  }
+}
+
 /* 1400 ~ */
 @media screen and (min-width: 1400px) {
-  .App {
+  .app {
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     main {
-      max-width: 1200px;
+      max-width: 1250px;
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
-      /* height: calc(100% - 80px); */
     }
   }
 }

@@ -8,13 +8,13 @@ const ProjectComponent = () => {
 
   return (
     <section className="project">
-      <ul className="projectGrid">
+      <ul className="project-grid">
         {PROJECT_LIST.map((item) => (
           <li
-            className={`projectItem ${active ? "active" : ""}`}
+            className={`project-item ${active ? "active" : ""}`}
             key={item.title}
           >
-            <div className="imageWrap">
+            <div className="image-wrap">
               <img
                 src={item.image}
                 alt={item.title}
@@ -22,7 +22,7 @@ const ProjectComponent = () => {
               />
             </div>
 
-            <div className="descriptionWrap">
+            <div className="description-wrap">
               <p>{item.title}</p>
               <button
                 type="button"
@@ -31,7 +31,7 @@ const ProjectComponent = () => {
                 Git Hub
               </button>
             </div>
-            <div className="iconWrap">
+            <div className="icon-wrap">
               {item.icon.map((icons, index) => (
                 <Icon
                   className="icon"

@@ -19,11 +19,11 @@ const AboutComponent = () => {
         <p>풍부한 경험과 미래에 대한 열정을 갖춘 웹 개발자 윤예빈입니다.</p>
       </section>
 
-      <section className="techStack">
-        <h3 className="techStackTitle">Skillset</h3>
-        <div className="techStackGrid">
+      <section className="tech-stack">
+        <h3 className="tech-stack-title">Skillset</h3>
+        <div className="tech-stack-grid">
           {SKILL_LIST.map((item) => (
-            <div key={item.name} className="techStackItem">
+            <div key={item.name} className="tech-stack-item">
               <Icon className="icon" icon={item.icon} />
               <div className="overlay">{item.name}</div>
             </div>
@@ -32,10 +32,10 @@ const AboutComponent = () => {
       </section>
 
       <section className="education">
-        <h3 className="educationTitle">Education</h3>
-        <ol className="educationList">
+        <h3 className="education-title">Education</h3>
+        <ol className="education-list">
           {EDUCATION_TIME_LINE.map((item) => (
-            <li key={item.title} className="educationItem">
+            <li key={item.title} className="education-item">
               <h4>{item.title}</h4>
               <span>{item.year}</span>
               <p>{item.context}</p>

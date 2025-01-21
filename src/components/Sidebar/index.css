@@ -1,6 +1,6 @@
-/* @media screen and (min-width: 1023px) {} */
 .sidebar {
-  width: 520px;
+  z-index: 1;
+  width: 100%;
   padding: 30px;
   background: #352f44;
   border: 1px solid #dbd8e334;
@@ -10,11 +10,12 @@
   .profile {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+    margin-bottom: 30px;
 
     > .profile-image {
       border-radius: 15px;
-      width: 100px;
+      width: 75px;
     }
 
     > .profile-text {
@@ -22,20 +23,22 @@
       flex-direction: column;
 
       > .profile-name {
-        font-size: 1.6rem;
-        margin: 20px 0;
+        font-size: 1.2rem;
+        margin: 10px 0;
       }
       > .profile-title {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        text-align: center;
         background: #5c5470;
-        padding: 5px 20px;
+        padding: 5px 10px;
         border-radius: 10px;
       }
     }
   }
 
-  > .information-list {
-    width: max-content;
+  .information-list {
+    width: 100%;
+    display: grid;
 
     > .information-item {
       display: flex;
@@ -64,16 +67,22 @@
         > .information-content {
           font-size: 14px;
           font-weight: 500;
+          text-align: left;
         }
       }
     }
   }
 
-  > .link-list {
+  .separator {
+    border-width: 1px 0 0 0;
+    border-color: #dbd8e334;
+    margin: 20px 0;
+  }
+
+  .link-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 30px;
 
     > .link-item {
       padding: 0 10px;
@@ -82,17 +91,42 @@
         transition: filter 0.2s;
       }
       .link-icon:hover {
-        filter: invert(0%) sepia(1%) saturate(7463%) hue-rotate(219deg)
-          brightness(90%) contrast(100%);
+        filter: invert(2%) sepia(3%) saturate(7463%) hue-rotate(0deg)
+          brightness(90%) contrast(120%);
       }
     }
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .sidebar {
+    width: 500px;
   }
 }
 
 /* 1024 ~ 1399까지 */
 @media screen and (min-width: 1024px) and (max-width: 1399px) {
   .sidebar {
-    width: 950px;
+    width: 880px;
+
+    .profile {
+      .profile-image {
+        width: 100px;
+      }
+
+      .profile-text {
+        .profile-name {
+          font-size: 1.5rem;
+        }
+        .profile-title {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .information-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -108,12 +142,24 @@
     > .profile {
       flex-direction: column;
       padding: 30px 0;
-      gap: 0;
+      margin-bottom: 0;
+      gap: 10px;
 
-      > .profile-image {
-        border-radius: 15px;
+      .profile-image {
         width: 150px;
       }
+      .profile-text {
+        .profile-name {
+          font-size: 1.8rem;
+        }
+        .profile-title {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .link-list {
+      justify-content: center;
     }
   }
 }

@@ -52,10 +52,10 @@ const ContactComponent = () => {
 
   return (
     <form ref={form} className="contact" onSubmit={onSendForm}>
-      <p className="contactInfo">
+      <p className="contact-info">
         If you have any questions, please feel free to leave a message☺️
       </p>
-      <div className="contactInput">
+      <div className="contact-input">
         <input
           type="text"
           value={name}
@@ -72,7 +72,7 @@ const ContactComponent = () => {
         />
       </div>
 
-      <div className="contactMessage">
+      <div className="contact-message">
         <textarea
           value={message}
           onChange={onChange}
@@ -81,8 +81,8 @@ const ContactComponent = () => {
         />
       </div>
 
-      <div className="sendButton">
-        <img className="linkIcon" src={Send} alt="SendIcon" />
+      <div className="send-button">
+        <img className="link-icon" src={Send} alt="SendIcon" />
         <button type="submit">Send Message</button>
       </div>
 
