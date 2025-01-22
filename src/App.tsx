@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/index";
 import About from "./components/Contents/About/index";
@@ -37,6 +37,10 @@ const App: React.FC = () => {
     title: sections[0].title,
     component: sections[0].component,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [isSection]);
 
   return (
     <div className="app">

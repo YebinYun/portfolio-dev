@@ -1,21 +1,26 @@
 import "./index.css";
 import { INFORMATION_LIST } from "../../constants/informationList";
 import { LINK_LIST } from "../../constants/linkList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 
 const SideBarComponent = () => {
   const [active, setActive] = useState(false);
 
-  const hideInformation = () => {
-    setActive(!active);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setActive(window.innerWidth < 1400);
+    };
+    handleResize();
+  }, []);
 
   return (
     <article className="sidebar">
       <div className="profile">
         <button
-          onClick={hideInformation}
+          onClick={() => {
+            setActive(!active);
+          }}
           className={
             active ? `information-button active` : `information-button`
           }
