@@ -12,6 +12,12 @@ const SideBarComponent = () => {
       setActive(window.innerWidth < 1400);
     };
     handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
