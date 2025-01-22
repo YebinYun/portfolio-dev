@@ -1,20 +1,16 @@
-import Github from "../assets/icons/GithubIcon.svg";
-import Velog from "../assets/icons/VelogIcon.svg";
-import Linkedin from "../assets/icons/LinkedinIcon.svg";
-
 export const LINK_LIST = [
   {
-    icon: Github,
+    icon: "akar-icons:github-fill",
     title: "github",
     link: "https://github.com/YebinYun",
   },
   {
-    icon: Velog,
+    icon: "simple-icons:velog",
     title: "velog",
     link: "https://velog.io/@yebind",
   },
   {
-    icon: Linkedin,
+    icon: "bi:linkedin",
     title: "linkedin",
     link: "#",
   },
