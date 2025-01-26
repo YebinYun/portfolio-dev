@@ -23,6 +23,8 @@
   }
 
   .react-pdf__Document {
+    padding: 50px 0;
+    background: white;
     div {
       canvas,
       .textLayer {
